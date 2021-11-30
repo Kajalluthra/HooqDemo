@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kDetailCellectionCell" id="rkZ-9t-PeY" customClass="DetailCollectionViewCell" customModule="HooqDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="145" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EI9-s9-pAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="145" height="180"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UVB-LY-tue" customClass="CustomImageView" customModule="HooqDemo" customModuleProvider="target">
+                                <rect key="frame" x="5" y="5" width="135" height="170"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UVB-LY-tue" firstAttribute="leading" secondItem="EI9-s9-pAZ" secondAttribute="leading" constant="5" id="0hX-oa-P4h"/>
+                            <constraint firstAttribute="bottom" secondItem="UVB-LY-tue" secondAttribute="bottom" constant="5" id="R46-jj-gzh"/>
+                            <constraint firstAttribute="trailing" secondItem="UVB-LY-tue" secondAttribute="trailing" constant="5" id="clL-SG-Het"/>
+                            <constraint firstItem="UVB-LY-tue" firstAttribute="top" secondItem="EI9-s9-pAZ" secondAttribute="top" constant="5" id="w8r-Ea-KgR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="EI9-s9-pAZ" firstAttribute="top" secondItem="rkZ-9t-PeY" secondAttribute="top" id="Sau-F6-glW"/>
+                <constraint firstAttribute="trailing" secondItem="EI9-s9-pAZ" secondAttribute="trailing" id="h1M-Ib-XvY"/>
+                <constraint firstAttribute="bottom" secondItem="EI9-s9-pAZ" secondAttribute="bottom" id="sqe-oO-X5l"/>
+                <constraint firstItem="EI9-s9-pAZ" firstAttribute="leading" secondItem="rkZ-9t-PeY" secondAttribute="leading" id="zpO-1n-k6D"/>
+            </constraints>
+            <size key="customSize" width="123" height="103"/>
+            <connections>
+                <outlet property="imageView" destination="UVB-LY-tue" id="keF-rB-a9j"/>
+            </connections>
+            <point key="canvasLocation" x="-386.39999999999998" y="-4.497751124437781"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kDetailTableCell" rowHeight="180" id="ee4-eM-Lqo" customClass="DetailTableViewCell" customModule="HooqDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ee4-eM-Lqo" id="W4C-Pg-krw">
+                <rect key="frame" x="0.0" y="0.0" width="110" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nM-vh-4na">
+                        <rect key="frame" x="0.0" y="0.0" width="110" height="161"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mmM-Kj-v39">
+                                <rect key="frame" x="10" y="26.5" width="90" height="134.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="0BW-jS-FO9">
+                                    <size key="itemSize" width="110" height="132"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="-1" id="rVx-Hp-c8O"/>
+                                    <outlet property="delegate" destination="-1" id="s4J-lu-sB3"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efu-hl-TE7">
+                                <rect key="frame" x="16" y="0.0" width="58" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mmM-Kj-v39" firstAttribute="top" secondItem="efu-hl-TE7" secondAttribute="bottom" constant="5" id="LKC-kR-gMR"/>
+                            <constraint firstItem="efu-hl-TE7" firstAttribute="leading" secondItem="0nM-vh-4na" secondAttribute="leading" constant="16" id="PIi-c9-cho"/>
+                            <constraint firstAttribute="bottom" secondItem="mmM-Kj-v39" secondAttribute="bottom" id="euB-Wp-WUG"/>
+                            <constraint firstItem="mmM-Kj-v39" firstAttribute="leading" secondItem="0nM-vh-4na" secondAttribute="leading" constant="10" id="k6s-tK-E7u"/>
+                            <constraint firstItem="efu-hl-TE7" firstAttribute="top" secondItem="0nM-vh-4na" secondAttribute="top" id="ktd-eQ-LRV"/>
+                            <constraint firstAttribute="trailing" secondItem="mmM-Kj-v39" secondAttribute="trailing" constant="10" id="xRx-gB-r6f"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="0nM-vh-4na" secondAttribute="bottom" constant="-1" id="G7Z-61-vgM"/>
+                    <constraint firstItem="0nM-vh-4na" firstAttribute="top" secondItem="W4C-Pg-krw" secondAttribute="top" id="I9O-Z8-0ci"/>
+                    <constraint firstItem="0nM-vh-4na" firstAttribute="leading" secondItem="W4C-Pg-krw" secondAttribute="leading" id="XHv-CJ-164"/>
+                    <constraint firstAttribute="trailing" secondItem="0nM-vh-4na" secondAttribute="trailing" id="pub-5i-Qga"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="similarLabel" destination="efu-hl-TE7" id="60D-p3-48o"/>
+                <outlet property="similarMovieCollectionView" destination="mmM-Kj-v39" id="gNy-se-XQq"/>
+            </connections>
+            <point key="canvasLocation" x="-124" y="9"/>
+        </tableViewCell>
+    </objects>
+</document>
